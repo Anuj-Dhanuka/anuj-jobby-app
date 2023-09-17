@@ -1,0 +1,20 @@
+.not-found-bg-container {
+  background-color: #000000;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-found-title {
+  font-family: Roboto;
+  color: #ffffff;
+  margin-top: 16px;
+}
+
+.not-found-description {
+  font-family: Roboto;
+  color: #f1f5f9;
+  margin-top: 12px;
+}
