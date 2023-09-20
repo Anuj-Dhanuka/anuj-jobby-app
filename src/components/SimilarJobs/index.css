@@ -19,10 +19,23 @@
   margin-right: 16px;
 }
 
+@media screen and (max-width: 767px) {
+  .similar-jobs-logo {
+    height: 60px;
+    width: 50px;
+  }
+}
+
 .similar-jobs-title {
   font-family: Roboto;
   color: #ffffff;
   font-size: 28px;
+}
+
+@media screen and (max-width: 767px) {
+  .similar-jobs-title {
+    font-size: 22px;
+  }
 }
 
 .similar-jobs-rating-container {
@@ -46,6 +59,12 @@
   color: #ffffff;
   font-size: 24px;
   margin-top: 24px;
+}
+
+@media screen and (max-width: 767px) {
+  .similar-jobs-description-title {
+    font-size: 20px;
+  }
 }
 
 .similar-jobs-description {

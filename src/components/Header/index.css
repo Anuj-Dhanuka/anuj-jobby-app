@@ -9,6 +9,13 @@
   padding-right: 32px;
 }
 
+@media screen and (max-width: 767px) {
+  .header-bg-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
 .header-logo-btn {
   background-color: transparent;
   border: none;
@@ -16,6 +23,13 @@
 
 .header-logo {
   height: 35px;
+}
+
+@media screen and (max-width: 767px) {
+  .header-logo {
+    width: 60px;
+    height: 30px;
+  }
 }
 
 .header-logout-btn {
@@ -30,8 +44,27 @@
   border-radius: 5px;
 }
 
+@media screen and (max-width: 767px) {
+  .header-logout-btn {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .btn-li-el {
+    display: none;
+  }
+}
+
+.header-logout-icon {
+  color: #ffffff;
+  width: 20px;
+  height: 20px;
+}
+
 .nav-items-container {
   display: flex;
+  align-items: center;
   list-style-type: none;
 }
 
@@ -40,6 +73,36 @@
   color: #ffffff;
   font-size: 20px;
   margin-right: 16px;
+}
+
+@media screen and (max-width: 767px) {
+  .nav-items {
+    display: none;
+  }
+}
+
+.header-job-icon {
+  fill: #ffffff;
+  margin-right: 16px;
+  width: 20px;
+  height: 20px;
+}
+
+.header-home-icon {
+  fill: #ffffff;
+  height: 20px;
+  width: 20px;
+  margin-right: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .header-home-icon {
+    display: none;
+  }
+
+  .header-job-icon {
+    display: none;
+  }
 }
 
 .header-link-style {

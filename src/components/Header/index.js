@@ -2,6 +2,10 @@ import './index.css'
 import {Link, withRouter} from 'react-router-dom'
 import Cookies from 'js-cookie'
 
+import {FiLogOut} from 'react-icons/fi'
+import {FaShoppingBag} from 'react-icons/fa'
+import {AiFillHome} from 'react-icons/ai'
+
 const Header = props => {
   const onClickLogout = () => {
     const {history} = props
@@ -15,27 +19,35 @@ const Header = props => {
         <img
           src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
           alt="website logo"
-          className="website logo"
+          className="header-logo"
         />
       </Link>
 
       <ul className="nav-items-container">
         <Link to="/" className="header-link-style">
           <li className="nav-items">Home</li>
+          <li>
+            <AiFillHome className="header-home-icon" />
+          </li>
         </Link>
         <Link to="/jobs" className="header-link-style">
           <li className="nav-items">Jobs</li>
+          <li>
+            <FaShoppingBag className="header-job-icon" />
+          </li>
         </Link>
+        <li className="btn-li-el">
+          <FiLogOut className="header-logout-icon" onClick={onClickLogout} />
+        </li>
       </ul>
-      <li className="btn-li-el">
-        <button
-          type="button"
-          className="header-logout-btn"
-          onClick={onClickLogout}
-        >
-          Logout
-        </button>
-      </li>
+
+      <button
+        type="button"
+        className="header-logout-btn"
+        onClick={onClickLogout}
+      >
+        Logout
+      </button>
     </div>
   )
 }

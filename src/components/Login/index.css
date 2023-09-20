@@ -16,6 +16,12 @@
   align-items: flex-start;
 }
 
+@media screen and (max-width: 576px) {
+  .login-card {
+    width: 90vw;
+  }
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -26,6 +32,16 @@
 .form-element-logo {
   align-self: center;
   margin-top: 32px;
+}
+
+@media screen and (max-width: 576px) {
+  .form-element-logo {
+    width: 100px;
+  }
+
+  .form-container {
+    padding-left: 16px;
+  }
 }
 
 .login-form-username {
@@ -44,6 +60,12 @@
   color: #cbd5e1;
   font-family: Roboto;
   margin-bottom: 24px;
+}
+
+@media screen and (max-width: 576px) {
+  .form-input-element-style {
+    width: 80vw;
+  }
 }
 
 .login-button {

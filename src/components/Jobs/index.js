@@ -222,7 +222,7 @@ class Jobs extends Component {
   )
 
   renderProfileDetailsOfUserLoadingView = () => (
-    <div className="loader-container" data-testid="loader">
+    <div className="job-list-loader-container" data-testid="loader">
       <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
     </div>
   )
@@ -259,6 +259,7 @@ class Jobs extends Component {
             <img
               src="https://assets.ccbp.in/frontend/react-js/no-jobs-img.png"
               alt="no jobs"
+              className="no-job-found-image"
             />
             <h1 className="job-list-failure-view-heading">No Jobs Found</h1>
             <p className="job-list-failure-view-description">
@@ -271,10 +272,11 @@ class Jobs extends Component {
   }
 
   renderJobListFailureView = () => (
-    <div>
+    <div className="job-list-failure-view-container">
       <img
         src="https://assets.ccbp.in/frontend/react-js/failure-img.png"
         alt="failure view"
+        className="job-list-failure-image"
       />
       <h1 className="job-list-failure-view-heading">
         Oops! Something Went Wrong
@@ -316,6 +318,25 @@ class Jobs extends Component {
       <div className="job-bg-container">
         <Header />
         <div className="job-inner-container">
+          <div className="input-search-container-sm">
+            <input
+              type="search"
+              className="input-search-bar-el"
+              onChange={this.onChangeJobListSearch}
+              value={searchedValue}
+            />
+
+            <button
+              type="button"
+              className="jobs-search-button"
+              onClick={this.onClickingSearchBtn}
+              data-testid="searchButton"
+            >
+              <div className="jobs-search-icon-container">
+                <AiOutlineSearch />
+              </div>
+            </button>
+          </div>
           <div className="profile-details-container">
             <div className="jobs-user-profile-outer-container">
               {this.renderProfileDetailsSection()}
@@ -330,7 +351,7 @@ class Jobs extends Component {
             <h1 className="type-of-employment">Salary Range</h1>
             <ul className="toe-ul-container">{this.renderRadioBox()}</ul>
           </div>
-          <div>
+          <div className="jobs-left-main-container">
             <div className="input-search-container">
               <input
                 type="search"
